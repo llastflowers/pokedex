@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    margin: 50px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 3% auto;
+}
+
+.search-sort {
+    padding: 20px;
+    width: 350px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: rgb(22, 24, 21);
+}
+
+*:focus {
+    outline: none;
+}
+
+.name {
+    padding-left: 10px;
+    height: 50px;
+    width: 305px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+.type {
+    padding-left: 10px;
+    margin-right: 10px;
+    height: 50px;
+    width: 145px;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+.weight {
+    padding-left: 10px;
+    height: 50px;
+    width: 145px;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+.sort-by {
+    padding-left: 10px;
+    height: 50px;
+    width: 305px;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid black;
+    font-size: 20px;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+p {
+
+}
+
+.pokemon-results img {
+    
+}
+
+.pokemon-results {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-gap: 5px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Pokédex</title>
+</head>
+<header><h1>Pokédex</h1></header>
+
+<section class="search-sort">
+    <input type="text" class="name" name="name" placeholder="Name"><br><br>
+    <select class="type">
+        <option selected="true" disabled="disabled" value="type">Type</option>
+        <option value="all">All</option>
+        <option value="grass">Grass</option>
+        <option value="water">Water</option>
+        <option value="fire">Fire</option>
+    </select>
+    <input type="number" class= "weight" name="weight" step="5" placeholder="Min. Weight"><br><br>
+    <select class="sort-by">
+            <option selected="true" disabled="disabled" value="sort">Sort By...</option>
+            <option value="low-to-high">Number ↑</option>
+            <option value="high-to-low">Number ↓</option>
+            <option value="water">A-Z</option>
+            <option value="fire">Z-A</option>
+    </select>
+</section>
+<section class="pokemon-results">
+    <div><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png">
+    <h2>#001 ・ Bulbasaur</h2>
+    <p>Type: Grass + Poison</p>
+    <p>Weight: 15.2 lbs</p>
+    </div>
+    <div><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/002.png">
+    <h2>#002 ・ Ivysaur</h2>
+    <p>Type: Grass + Poison</p>
+    <p>Weight: 28.7 lbs</p>
+    </div>
+    <div><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png">
+    <h2>#003 ・ Venusaur</h2>
+    <p>Type: Grass + Poison</p>
+    <p>Weight: 220.5 lbs</p>
+    </div>
+    <div><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png">
+    <h2>#004 ・ Charmander</h2>
+    <p>Type: Fire</p>
+    <p>Weight: 18.7 lbs</p>
+    </div>
+    <div><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/005.png">
+    <h2>#005 ・ Charmeleon</h2>
+    <p>Type: Fire</p>
+    <p>Weight: 41.9 lbs</p>
+    </div>
+    <div><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png">
+    <h2>#006 ・ Charizard</h2>
+    <p>Type: Fire + Flying</p>
+    <p>Weight: 199.5 lbs</p>
+    </div>
+    <div><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png">
+    <h2>#007 ・ Squirtle</h2>
+    <p>Type: Water</p>
+    <p>Weight: 19.8 lbs</p>
+    </div>
+    <div><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/008.png">
+    <h2>#008 ・ Wartortle</h2>
+    <p>Type: Water</p>
+    <p>Weight: 49.6 lbs</p>
+    </div>
+</section>
+
+<body>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
