@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="main.css">
     <title>Pokédex</title>
 </head>
+
 <header><h1>Pokédex</h1></header>
+
+<div class="pokeballs">
+<img class="pokeball" src="./assets/pokeball-white.png"><img class="pokeball" src="./assets/pokeball-white.png"><img class="pokeball" src="./assets/pokeball-white.png">
+</div>
 
 <section class="search-sort">
     <input type="text" class="name" name="name" placeholder="Name"><br><br>
@@ -20,7 +25,7 @@
         <option value="water">Water</option>
         <option value="fire">Fire</option>
     </select>
-    <input type="number" class= "weight" name="weight" step="5" placeholder="Min. Weight"><br><br>
+    <input type="number" class= "weight" name="weight" step="10" placeholder="Min. Weight"><br><br>
     <select class="sort-by">
             <option selected="true" disabled="disabled" value="sort">Sort By...</option>
             <option value="low-to-high">Number ↑</option>
@@ -33,9 +38,9 @@
         <button class="search-button" id="search-button">Search</button><button class="reset-button" id="reset-button">Reset</button>
     </section>
     
-    <section class="page-controls">
-    <button class="prev-button" id="prev-button">Previous</button><button class="next-button" id="next-button">Next</button>
-    </section>
+</section>
+<h3>151 Results</h3>
+<h3>Page 1 of 19</h3>
 <div class="results-background">
 <section class="pokemon-results">
     <div><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png">
@@ -80,6 +85,10 @@
     </div>
 </section>
 </div>
+
+<section class="page-controls">
+        <button class="prev-button" id="prev-button">Previous</button><button class="next-button" id="next-button">Next</button>
+
 <body>
 
     <script type="module" src="app.js"></script>
