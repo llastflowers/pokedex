@@ -2,6 +2,8 @@ import Component from '../Component.js';
 
 class PokemonItem extends Component {
     renderHTML() {
+        const pokemon = this.props.pokemon;
+
         return /*html*/`
             <div class="pokemon-item">
                 <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png">

@@ -1,8 +1,18 @@
-import Component from '../Component.js';
-import Header from '../common/Header.js';
-import SearchOptions from '../pokedex/SearchOptions.js';
-import Paging from '../pokedex/Paging.js';
+import Component from './Component.js';
+import Header from './common/Header.js';
+import SearchOptions from './pokedex/SearchOptions.js';
+import Paging from './pokedex/Paging.js';
 import PokemonList from './pokedex/PokemonList.js';
+
+const pokemanz = [
+    {
+        Number: '001',
+        Name: 'Bulbasaur',
+        Type: 'Grass + Poison',
+        Weight: '15.2 lbs',
+        Image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png'
+    }
+];
 
 class HomeApp extends Component {
 
@@ -18,7 +28,7 @@ class HomeApp extends Component {
         const paging = new Paging();
         listSection.appendChild(paging.renderDOM());
 
-        const pokemonList = new PokemonList();
+        const pokemonList = new PokemonList({ pokemanz: pokemanz });
         listSection.appendChild(pokemonList.renderDOM());
     }
 

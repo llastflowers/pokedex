@@ -18,6 +18,7 @@ class Component {
         }
 
         const dom = htmlToDOM(html);
+        
         this.rootElement = dom;
         this.onRender(dom);
 
