@@ -6,91 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="main.css">
-    <title>Pokédex</title>
+    <link rel="stylesheet" href="home.css">
+    <title>Pokédex - Home</title>
 </head>
 
-<header><h1>Pokédex</h1></header>
-
-<div class="pokeballs">
-<img class="pokeball" src="./assets/pokeball-white.png"><img class="pokeball" src="./assets/pokeball-white.png"><img class="pokeball" src="./assets/pokeball-white.png">
-</div>
-
-<section class="search-sort">
-    <input type="text" class="name" name="name" placeholder="Name"><br><br>
-    <select class="type">
-        <option selected="true" disabled="disabled" value="type">Type</option>
-        <option value="all">All</option>
-        <option value="grass">Grass</option>
-        <option value="water">Water</option>
-        <option value="fire">Fire</option>
-    </select>
-    <input type="number" class= "weight" name="weight" step="10" placeholder="Min. Weight"><br><br>
-    <select class="sort-by">
-            <option selected="true" disabled="disabled" value="sort">Sort By...</option>
-            <option value="low-to-high">Number ↑</option>
-            <option value="high-to-low">Number ↓</option>
-            <option value="water">A-Z</option>
-            <option value="fire">Z-A</option>
-    </select>
-</section>
-<section class="search-controls">
-        <button class="search-button" id="search-button">Search</button><button class="reset-button" id="reset-button">Reset</button>
-    </section>
-    
-</section>
-<h3>151 Results</h3>
-<h3>Page 1 of 19</h3>
-<div class="results-background">
-<section class="pokemon-results">
-    <div><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png">
-    <h2>#001 ・ Bulbasaur</h2>
-    <p>Type: Grass + Poison</p>
-    <p>Weight: 15.2 lbs</p>
-    </div>
-    <div><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/002.png">
-    <h2>#002 ・ Ivysaur</h2>
-    <p>Type: Grass + Poison</p>
-    <p>Weight: 28.7 lbs</p>
-    </div>
-    <div><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/003.png">
-    <h2>#003 ・ Venusaur</h2>
-    <p>Type: Grass + Poison</p>
-    <p>Weight: 220.5 lbs</p>
-    </div>
-    <div><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png">
-    <h2>#004 ・ Charmander</h2>
-    <p>Type: Fire</p>
-    <p>Weight: 18.7 lbs</p>
-    </div>
-    <div><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/005.png">
-    <h2>#005 ・ Charmeleon</h2>
-    <p>Type: Fire</p>
-    <p>Weight: 41.9 lbs</p>
-    </div>
-    <div><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/006.png">
-    <h2>#006 ・ Charizard</h2>
-    <p>Type: Fire + Flying</p>
-    <p>Weight: 199.5 lbs</p>
-    </div>
-    <div><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png">
-    <h2>#007 ・ Squirtle</h2>
-    <p>Type: Water</p>
-    <p>Weight: 19.8 lbs</p>
-    </div>
-    <div><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/008.png">
-    <h2>#008 ・ Wartortle</h2>
-    <p>Type: Water</p>
-    <p>Weight: 49.6 lbs</p>
-    </div>
-</section>
-</div>
-
-<section class="page-controls">
-        <button class="prev-button" id="prev-button">Previous</button><button class="next-button" id="next-button">Next</button>
-
 <body>
+    <header><h1>Pokédex</h1>
+        <div class="pokeballs">
+                <img class="pokeball" src="./assets/pokeball.png"><img class="pokeball" src="./assets/pokeball.png"><img class="pokeball" src="./assets/pokeball.png"><img class="pokeball" src="./assets/pokeball.png"><img class="pokeball" src="./assets/pokeball.png"><img class="pokeball" src="./assets/pokeball.png">
+            </div>
+    </header>
 
+    <h2>Turn on Pokédex to Begin!</h2>
+    <div class="enter">
+        <a href="pokedex.html"><img class="pokedex" title="Turn on Pokédex!"src="https://img.rankedboost.com/wp-content/uploads/2016/07/Pokemon-Go-Pok%C3%A9dex.png"></a>
+    </div>
     <script type="module" src="app.js"></script>
 </body>
 

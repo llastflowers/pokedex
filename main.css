@@ -27,14 +27,14 @@ h1 {
     width: 350px;
     font-weight: bold;
     text-align: center;
-    margin: 3% auto;
+    margin: 0 auto;
     letter-spacing: 2px;
 }
 
 .pokeball {
-    height: 80px;
-    width: 80px;
-    margin: 20px;
+    height: 50px;
+    width: 50px;
+    margin: 5%;
 }
 
 .pokeballs {
@@ -190,6 +190,77 @@ p {
     box-shadow: inset 2px 2px 8px;
     border: 6px solid rgb(158, 30, 30, 0.8);
 }
+
+.results-background {grid-area: pokemon;}
+.search-sort {grid-area: form;}
+.blue {grid-area: blue;}
+.search-controls {grid-area: search;}
+.results {grid-area: results;}
+.page-controls {grid-area: page;}
+
+.wrapper {
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 
+      "form"
+      "search"
+      "results"
+      "pokemon"
+      "page";
+}
+
+@media (max-width: 961px) {
+    .blue {
+        display:none;
+    }
+}
+
+@media (min-width: 960px) {
+    .wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "pokemon form"
+        "pokemon blue"
+        "pokemon search"
+        "pokemon results"
+        "pokemon page";
+    }
+
+    header {
+        margin-bottom: 2%;
+    }
+
+    .blue {
+        margin: 0 auto;
+    }
+    
+    .blue button {
+        height: 70px;
+        width: 70px;
+        background-color: rgb(78, 188, 190);
+        border: 2px solid  rgb(47, 124, 126);
+    }
+
+    .pokemon-results {
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+    }
+  
+    .results-background {
+        width: 1100px;
+        padding: 35px;
+        display: flex;
+        align-content: center;
+        border-radius: 10px 10px 10px 90px;
+        background-color: rgb(236, 236, 236);
+        border: 4px solid rgb(175 23 39);
+    }
+
+    .pokeball {
+        display: none;
+    }
+  }
 
 /* .pokemon-results div {
     background-color: white;
