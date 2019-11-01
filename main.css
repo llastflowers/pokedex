@@ -228,19 +228,39 @@ p {
         "pokemon page";
     }
 
+    body {
+        margin: 2%;
+    }
+
     header {
-        margin-bottom: 2%;
+        margin-bottom: 1.5%;
     }
 
     .blue {
-        margin: 0 auto;
+        margin: 1% auto;
     }
     
     .blue button {
-        height: 70px;
-        width: 70px;
+        height: 69px;
+        width: 69px;
         background-color: rgb(78, 188, 190);
         border: 2px solid  rgb(47, 124, 126);
+    }
+
+    .blue button:active {
+        background-color: rgb(111, 238, 240);
+    }
+
+    .search-sort {
+        margin: 1% auto;
+    }
+
+    .search-controls {
+        margin: 1% auto;
+    }
+
+    .page-controls {
+        margin: 1% auto;
     }
 
     .pokemon-results {
@@ -259,6 +279,10 @@ p {
 
     .pokeball {
         display: none;
+    }
+
+    h3 {
+        margin: 2% auto;
     }
   }
 
