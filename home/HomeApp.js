@@ -12,11 +12,12 @@ class HomeApp extends Component {
         return /*html*/`
             <div>
                 <!-- header -->
-
-                <h2>Turn on Pokédex to Begin!</h2>
-                <div class="enter">
-                    <a href="pokedex.html"><img class="pokedex" title="Turn on Pokédex!"src="https://img.rankedboost.com/wp-content/uploads/2016/07/Pokemon-Go-Pok%C3%A9dex.png"></a>
-                </div>
+                <main>
+                    <h2>Turn on Pokédex to Begin!</h2>
+                    <div class="enter">
+                        <a href="pokedex.html"><img class="pokedex" title="Turn on Pokédex!"src="https://img.rankedboost.com/wp-content/uploads/2016/07/Pokemon-Go-Pok%C3%A9dex.png"></a>
+                    </div>
+                </main>
             </div>
         `;
     }
