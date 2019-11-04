@@ -4,24 +4,31 @@ class SearchOptions extends Component {
 
     renderHTML() {
         return /*html*/`
-            <section class="search-sort">
+            <div>
+            <section>
                 <input type="text" class="name" name="name" placeholder="Name"><br><br>
-            <select class="type">
+                <select class="type">
                 <option selected="true" disabled="disabled" value="type">Type</option>
                 <option value="all">All</option>
                 <option value="grass">Grass</option>
                 <option value="water">Water</option>
                 <option value="fire">Fire</option>
-            </select>
-            <input type="number" class= "weight" name="weight" step="10" placeholder="Min. Weight"><br><br>
-            <select class="sort-by">
+                </select>
+                <input type="number" class= "weight" name="weight" step="10" placeholder="Min. Weight"><br><br>
+                <select class="sort-by">
                 <option selected="true" disabled="disabled" value="sort">Sort By...</option>
                 <option value="low-to-high">Number ↑</option>
                 <option value="high-to-low">Number ↓</option>
                 <option value="water">A-Z</option>
                 <option value="fire">Z-A</option>
-            </select>
+                </select>
             </section>
+            <section class="blue"><button></button><button></button><button></button><button></button><button></button><br><button></button><button></button><button></button><button></button><button></button>
+            </section>
+            <section>
+                <button class="search-button" id="search-button">Search</button><button class="reset-button" id="reset-button">Reset</button>
+            </section>
+            </div>
         `;
     }
 }

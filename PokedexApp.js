@@ -36,6 +36,10 @@ class PokedexApp extends Component {
                 <div class="wrapper">
                         <section class="search-sort">
                         </section>
+                        <section class="blue">
+                        </section>
+                        <section class="search-controls">
+                        </section>
                     <div class="results-background">
                         <section class="pokemon-results">
                         </section>
