@@ -3,20 +3,11 @@ import Header from './common/Header.js';
 import SearchOptions from './pokedex/SearchOptions.js';
 import Paging from './pokedex/Paging.js';
 import PokemonList from './pokedex/PokemonList.js';
+import { getPokemanz } from './services/pokedex-api.js';
 
-const pokemanz = [
-    {
-        Number: '001',
-        Name: 'Bulbasaur',
-        Type: 'Grass + Poison',
-        Weight: '15.2 lbs',
-        Image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png'
-    }
-];
+class PokedexApp extends Component {
 
-class HomeApp extends Component {
-
-    onRender(dom) {
+    async onRender(dom) {
         const header = new Header();
         dom.prepend(header.renderDOM());
 
@@ -24,28 +15,32 @@ class HomeApp extends Component {
         const searchOptions = new SearchOptions();
         optionsSection.prepend(searchOptions.renderDOM());
 
-        const listSection = dom.querySelector('.list-section');
+        const listSection = dom.querySelector('.pokemon-results');
         const paging = new Paging();
         listSection.appendChild(paging.renderDOM());
 
-        const pokemonList = new PokemonList({ pokemanz: pokemanz });
+        const pokemonList = new PokemonList({ pokemanz: [] });
         listSection.appendChild(pokemonList.renderDOM());
+
+        const pokemanz = await getPokemanz();
+        const results = pokemanz.results;
+
+        pokemonList.update({ pokemanz: results });
     }
 
     renderHTML() {
         return /*html*/`
             <div>
                 <!-- header -->
-
+                <header>
+                </header>
+                
                 <main>
                     <section class="options-section">
-                        <!-- options -->
                     </section>
-                
-                    <section class="list-section">
-                        <!-- paging -->
-
-                        <!-- pokemon list -->
+                    <section class="paging-section">
+                    </section>
+                    <section class="pokemon-results">
 
                     </section>
                 </main>
@@ -54,4 +49,4 @@ class HomeApp extends Component {
     }
 }
 
-export default HomeApp;
+export default PokedexApp;

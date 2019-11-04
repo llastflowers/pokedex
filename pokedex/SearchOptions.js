@@ -5,26 +5,20 @@ class SearchOptions extends Component {
     renderHTML() {
         return /*html*/`
             <div>
-                <form class="search">
-                    <p>Search</p>
-                    <input name="search">
-                    <button>Go!</button>
+                <section class="options-section">
+                <form class="search-form">
+                <input class="pokemon-name-search" placeholder="Pokemon Name">
+                <input class="pokemon-weight-search" placeholder="Pokemon Weight">
+    
+                <h2>Type: <select class="pokemon-type-dropdown"></h2>
+                <option>All</option>
+                <option>Water</option>
+                <option>Fire</option>
+                <option>Grass</option>
+                </select>
+                <button>Go!</button>
                 </form>
-
-                <fieldset class="type">
-                    <label>
-                        <input type="radio" name="type" value="grass" checked>
-                        Grass
-                    </label>
-                    <label>
-                        <input type="radio" name="type" value="water">
-                        Water
-                    </label>
-                    <label>
-                        <input type="radio" name="type" value="fire">
-                        Fire
-                    </label>
-                </fieldset>
+                </section>
             </div>
         `;
     }
