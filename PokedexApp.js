@@ -11,7 +11,7 @@ class PokedexApp extends Component {
         const header = new Header();
         dom.prepend(header.renderDOM());
 
-        const optionsSection = dom.querySelector('.options-section');
+        const optionsSection = dom.querySelector('.search-sort');
         const searchOptions = new SearchOptions();
         optionsSection.prepend(searchOptions.renderDOM());
 
@@ -31,20 +31,19 @@ class PokedexApp extends Component {
     renderHTML() {
         return /*html*/`
             <div>
-                <!-- header -->
                 <header>
                 </header>
-                
-                <main>
-                    <section class="options-section">
-                    </section>
-                    <section class="paging-section">
-                    </section>
-                    <section class="pokemon-results">
-
-                    </section>
-                </main>
-            </div>
+                <div class="wrapper">
+                        <section class="search-sort">
+                        </section>
+                    <div class="results-background">
+                        <section class="pokemon-results">
+                        </section>
+                    </div>
+                        <section class="page-controls">
+                        </section>
+                </div>
+            </div>        
         `;
     }
 }

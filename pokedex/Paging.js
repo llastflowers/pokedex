@@ -3,11 +3,14 @@ import Component from '../Component.js';
 class Paging extends Component {
     renderHTML() {
         return /*html*/`
-            <section class="paging-section">
-                <button class="prev" disabled>Previous</button>
-                <span>Page 1 of 5</span>
-                <button class="next">Next</button>
-            </section>
+
+        <section class="page-controls">
+            <div class="results">
+                <h3>151 Results</h3>
+                <h3>Page 1 of 19</h3>
+            </div>
+            <button class="prev-button" id="prev-button">Previous</button><button class="next-button" id="next-button">Next</button>
+        </section>
         `;
     }
 }

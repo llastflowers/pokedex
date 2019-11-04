@@ -5,6 +5,10 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+*:focus {
+    outline: none;
+}
+
 body {
     margin: 40px;
     font-family: 'Roboto Condensed', sans-serif;

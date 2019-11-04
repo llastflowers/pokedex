@@ -4,33 +4,22 @@ import PokemonItem from './PokemonItem.js';
 class PokemonList extends Component {
 
     onRender(dom){
-        const pokemonItem = new PokemonItem();
-        dom.prepend(pokemonItem.renderDOM());
+        const { pokemanz } = this.props;
+
+        pokemanz.forEach(pokemon => {
+            const pokemonItem = new PokemonItem({ pokemon });
+            const pokemonItemDOM = pokemonItem.renderDOM();
+            dom.appendChild(pokemonItemDOM);
+        });
     }
-
-    // onRender(dom) {
-    //     const pokemanz = this.props.pokemanz;
-
-    //     pokemanz.forEach(pokemon => {
-    //         const pokemonItem = new PokemonItem({ pokemon: pokemon });
-    //         const pokemonItemDOM = pokemonItem.renderDOM();
-    //         dom.appendChild(pokemonItemDOM);
-    //     });
-    // }
 
     renderHTML() {
 
         return /*html*/`
-            <section class="pokemon-results">
-                <div class="pokemon-item"></div>
-                <div class="pokemon-item"></div>
-                <div class="pokemon-item"></div>
-                <div class="pokemon-item"></div>
-                <div class="pokemon-item"></div>
-                <div class="pokemon-item"></div>
-                <div class="pokemon-item"></div>
-                <div class="pokemon-item"></div>
-            </section>
+            <div class="results-background">
+                <section class="pokemon-results">
+                </section>
+            </div>
         `;
     }
 }
