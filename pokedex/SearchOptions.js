@@ -23,12 +23,7 @@ class SearchOptions extends Component {
                 <option value="fire">Z-A</option>
                 </select>
             </section>
-            <section class="blue"><button></button><button></button><button></button><button></button><button></button><br><button></button><button></button><button></button><button></button><button></button>
-            </section>
-            <section>
-                <button class="search-button" id="search-button">Search</button><button class="reset-button" id="reset-button">Reset</button>
-            </section>
-            </div>
+        </div>
         `;
     }
 }

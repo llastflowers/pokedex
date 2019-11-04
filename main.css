@@ -45,6 +45,7 @@ h1 {
 .search-sort {
     padding: 20px;
     width: 350px;
+    height: 230px;
     border-radius: 10px;
     background: rgb(22, 24, 21);
     margin: 20px auto;

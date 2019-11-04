@@ -16,10 +16,8 @@ class PokemonList extends Component {
     renderHTML() {
 
         return /*html*/`
-            <div class="results-background">
                 <section class="pokemon-results">
                 </section>
-            </div>
         `;
     }
 }
