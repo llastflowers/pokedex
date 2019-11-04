@@ -1,6 +1,6 @@
 function htmlToDOM(html) {
     const template = document.createElement('template');
-    template.inerHTML = html;
+    template.innerHTML = html;
     const content = template.content;
 
     if (content.children.length > 1) {

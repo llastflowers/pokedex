@@ -6,8 +6,9 @@ class HomeApp extends Component {
     onRender(dom) {
         const header = new Header();
         dom.prepend(header.renderDOM());
+    
     }
-
+   
     renderHTML() {
         return /*html*/`
             <div>
@@ -19,8 +20,9 @@ class HomeApp extends Component {
                     </div>
                 </main>
             </div>
-        `;
+            `;
     }
 }
+// console.log(dom);
 
 export default HomeApp;
