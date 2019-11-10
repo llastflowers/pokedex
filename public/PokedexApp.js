@@ -1,9 +1,7 @@
 import Component from './Component.js';
 import Header from './common/Header.js';
 import SearchOptions from './pokedex/SearchOptions.js';
-// import ResultsDataSection from './pokedex/Results.js';
 import BlueButtons from './pokedex/BlueButtons.js';
-// import SearchButtons from './pokedex/SearchButtons.js';
 import Paging from './pokedex/Paging.js';
 import PokemonList from './pokedex/PokemonList.js';
 import { getPokemon } from './services/pokedex-api.js';
@@ -21,14 +19,6 @@ class PokedexApp extends Component {
         const blueSection = dom.querySelector('.blue');
         const blueButtons = new BlueButtons();
         blueSection.prepend(blueButtons.renderDOM());
-
-        // const searchControls = dom.querySelector('.search-controls');
-        // const searchButtons = new SearchButtons();
-        // searchControls.prepend(searchButtons.renderDOM());
-        
-        // const resultsData = dom.querySelector('.results-data');
-        // const resultsDataSection = new ResultsDataSection();
-        // resultsData.prepend(resultsDataSection.renderDOM());
 
         const listSection = dom.querySelector('.pokemon-results');
 
