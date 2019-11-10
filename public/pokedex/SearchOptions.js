@@ -3,19 +3,19 @@ import Component from '../Component.js';
 class SearchOptions extends Component {
 
     onRender(form) {
-        const searchInput = form.querySelector('input[name=name]');
-        const typeDropdown = form.querySelectorAll('select[name=type]');
+        const searchInput = form.querySelector('input[name=search]');
+        const typeDropdown = form.querySelectorAll('select[name=sort]');
 
         function updateControls() {
             const queryString = window.location.hash.slice(1);
             const searchParams = new URLSearchParams(queryString);
 
-            searchInput.value = searchParams.get('s') || '';
+            searchInput.value = searchParams.get('pokemon') || searchParams.get('weight') || searchParams.get('hp') || searchParams.get('type_1') || '';
 
-            const type = searchParams.get('type');
-            if (type) {
+            const sort = searchParams.get('sort');
+            if (sort) {
                 typeDropdown.forEach(typeDropdown => {
-                    typeDropdown.selected = typeDropdown.value === type;
+                    typeDropdown.selected = typeDropdown.value === sort;
                 });
             }
         }
@@ -30,41 +30,47 @@ class SearchOptions extends Component {
             event.preventDefault();
             const formData = new FormData(form);
 
-            const queryString = window.location.hash.slice(1);
+            const queryString = '';
             const searchParams = new URLSearchParams(queryString);
 
-            searchParams.set('type', formData.get('type'));
-            searchParams.set('s', formData.get('search'));
-            //reset to page 1 as this is new search and
-            //we don't know how many pages
+            searchParams.set(formData.get('sort'), formData.get('search'));
             searchParams.set('page', 1);
 
             window.location.hash = searchParams.toString();
+
+
         });
+
     }
 
     renderHTML() {
         return /*html*/`
-            <div>
-            <section>
-                <input type="text" class="name" name="name" placeholder="Name"><br><br>
-                <select class="type" name="type" value="type">
-                <option selected="true" disabled="disabled">Type</option>
-                <option value="all">All</option>
-                <option value="grass">Grass</option>
-                <option value="water">Water</option>
-                <option value="fire">Fire</option>
-                </select>
-                <input type="number" class= "weight" name="weight" step="10" placeholder="Min. Weight"><br><br>
-                <select class="sort-by">
-                <option selected="true" disabled="disabled" value="sort">Sort By...</option>
-                <option value="low-to-high">Number ↑</option>
-                <option value="high-to-low">Number ↓</option>
-                <option value="water">A-Z</option>
-                <option value="fire">Z-A</option>
-                </select>
-            </section>
-        </div>
+            <form class="options">
+                <input id="search" type="text" class="name" name="search" placeholder="Search"><br><br>
+                <fieldset class="sort-options">
+                    <label>
+                        <input type="radio" name="sort" value="pokemon" checked>
+                        Name
+                    </label>
+                    <label>
+                        <input type="radio" name="sort" value="type" checked>
+                        Type
+                    </label>
+                    <label>
+                        <input type="radio" name="sort" value="weight">
+                        Weight
+                    </label>
+                    <label>
+                        <input type="radio" name="sort" value="hp">
+                        HP
+                    </label>
+                </fieldset>
+
+                <section class="search-controls">
+                    <button type="submit" class="search-button" id="search-button">Search</button><button class="blank-button"></button>
+                </section>
+            </form>
+
         `;
     }
 }

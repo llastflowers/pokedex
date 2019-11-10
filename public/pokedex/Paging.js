@@ -35,7 +35,6 @@ class Paging extends Component {
             const queryString = window.location.hash.slice(1);
             const searchParams = new URLSearchParams(queryString);
             searchParams.set('page', page + increment);
-
             window.location.hash = searchParams.toString();
         }
 
@@ -49,7 +48,6 @@ class Paging extends Component {
     }
 
     renderHTML() {
-        const perPage = 10;
         const totalResults = this.props.totalResults;
         const queryString = window.location.hash.slice(1);
         const searchParams = new URLSearchParams(queryString);
@@ -65,17 +63,16 @@ class Paging extends Component {
 
         if (!totalResults) {
             return /*html*/`
-                <h3 class="paging">0 Results</h3>
+                <h3 class="no-results">No Results</h3>
             `;
         }
-
+        const perPage = 20;
         const lastPage = Math.ceil(totalResults / perPage);
 
         return /*html*/`
 
             <section class="">
             <div class="results-data">
-                <h3 class="paging"></h3>
                 <h3>Page ${page} of ${lastPage}</h3>
             </div>
                 <button class="prev-button" id="prev-button" ${page === 1 ? 'disabled' : ''}>Previous</button><button class="next-button" id="next-button" ${page === lastPage ? 'disabled' : ''}>Next</button>

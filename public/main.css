@@ -45,10 +45,31 @@ h1 {
 .search-sort {
   padding: 20px;
   width: 350px;
-  height: 230px;
+  height: 180px;
   border-radius: 10px;
   background: rgb(22, 24, 21);
   margin: 20px auto;
+}
+
+input#search.name {
+  margin-top: 10px;
+}
+
+.sort-options {
+  color: white;
+  width: 300px;
+  margin: 25px auto;
+  font-size: 20px;
+}
+
+.sort-options input {
+  background-color: white;
+  margin: 0 6px 0 6px;
+}
+
+.sort-options input:hover,
+.sort-options label:hover {
+  cursor: pointer;
 }
 
 *:focus {
@@ -84,14 +105,14 @@ h1 {
   font-size: 20px;
 }
 
-.sort-by {
+.hp {
   padding-left: 10px;
   height: 50px;
-  width: 310px;
+  width: 145px;
   border-radius: 10px;
-  background: white;
   border: 1px solid black;
   font-size: 20px;
+  margin-left: 20px;
 }
 
 .search-controls {
@@ -139,6 +160,12 @@ h1 {
 .page-controls button:active {
   background-color: white;
   color: black;
+}
+
+.no-results {
+  position: fixed;
+  right: 210px;
+  bottom: 120px;
 }
 
 h3 {
@@ -211,6 +238,7 @@ p {
 .results {
   grid-area: results;
 }
+
 .page-controls {
   grid-area: page;
 }
@@ -256,7 +284,7 @@ p {
   .blue {
     margin: 1% auto;
     position: fixed;
-    top: 520px;
+    top: 495px;
     right: 104px;
   }
 
@@ -280,21 +308,21 @@ p {
 
   .results-data {
     position: fixed;
-    bottom: 30px;
+    bottom: 55px;
     right: 214px;
-}
+  }
 
   .search-controls {
     margin: 1% auto;
     position: fixed;
-    top: 417px;
+    top: 380px;
     right: 200px;
   }
 
   .page-controls {
     margin: 1% auto;
     position: fixed;
-    bottom: 95px;
+    bottom: 105px;
     right: 142px;
   }
 
