@@ -48,14 +48,7 @@ h1 {
   height: 230px;
   border-radius: 10px;
   background: rgb(22, 24, 21);
-  margin: 20px auto auto;
-}
-
-
-.results-data {
-    position: fixed;
-    top: 730px;
-    right: 330px;
+  margin: 20px auto;
 }
 
 *:focus {
@@ -128,9 +121,6 @@ h1 {
   margin: 20px auto;
   display: flex;
   justify-content: center;
-  position: fixed;
-  top: 810px;
-  right: 255px;
 }
 
 .page-controls button {
@@ -265,6 +255,9 @@ p {
 
   .blue {
     margin: 1% auto;
+    position: fixed;
+    top: 520px;
+    right: 104px;
   }
 
   .blue button {
@@ -280,14 +273,29 @@ p {
 
   .search-sort {
     margin: 1% auto;
+    position: fixed;
+    top: 165px;
+    right: 104px;
   }
+
+  .results-data {
+    position: fixed;
+    bottom: 30px;
+    right: 214px;
+}
 
   .search-controls {
     margin: 1% auto;
+    position: fixed;
+    top: 417px;
+    right: 200px;
   }
 
   .page-controls {
     margin: 1% auto;
+    position: fixed;
+    bottom: 95px;
+    right: 142px;
   }
 
   .pokemon-results {

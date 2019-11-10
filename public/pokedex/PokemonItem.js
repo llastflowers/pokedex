@@ -2,15 +2,15 @@ import Component from '../Component.js';
 
 class PokemonItem extends Component {
     renderHTML() {
-        const pokemon = this.props.pokemon;
+        const pokeman = this.props.pokeman;
 
         return /*html*/`
 
             <div class="pokemon-item">
-                <img src="${pokemon.url_image}">
-                <h2>#${pokemon.id} ・ ${pokemon.pokemon}</h2>
-                <p>Type: ${pokemon.type_1} + ${pokemon.type_2}</p>
-                <p>Weight: ${pokemon.weight} lbs</p>
+                <img src="${pokeman.url_image}">
+                <h2>#${pokeman.id} ・ ${pokeman.pokemon}</h2>
+                <p>Type: ${pokeman.type_1} + ${pokeman.type_2}</p>
+                <p>Weight: ${pokeman.weight} lbs</p>
             </div>
         `;
     }

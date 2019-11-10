@@ -6,7 +6,7 @@ import BlueButtons from './pokedex/BlueButtons.js';
 import SearchButtons from './pokedex/SearchButtons.js';
 import Paging from './pokedex/Paging.js';
 import PokemonList from './pokedex/PokemonList.js';
-import { getPokemanz } from './services/pokedex-api.js';
+import { getPokemon } from './services/pokedex-api.js';
 
 class PokedexApp extends Component {
 
@@ -32,7 +32,7 @@ class PokedexApp extends Component {
 
         const listSection = dom.querySelector('.pokemon-results');
 
-        const pokemonList = new PokemonList({ pokemanz: [] });
+        const pokemonList = new PokemonList({ pokemon: [] });
         listSection.appendChild(pokemonList.renderDOM());
 
         const pageControls = dom.querySelector('.page-controls');
@@ -40,18 +40,18 @@ class PokedexApp extends Component {
         const paging = new Paging();
         pageControls.appendChild(paging.renderDOM());
 
-        async function loadPokemanz() {
-            const response = await getPokemanz();
-            const pokemanz = response.Search;
-            const totalResults = response.totalResults;
-            pokemonList.update({ pokemanz: pokemanz });
+        async function loadPokemon() {
+            const response = await getPokemon();
+            const pokemon = response.results;
+            const totalResults = response.count;
+            pokemonList.update({ pokemon: pokemon });
             paging.update({ totalResults: totalResults });
         }
 
-        loadPokemanz();
+        loadPokemon();
 
         window.addEventListener('hashchange', () => {
-            loadPokemanz();
+            loadPokemon();
         });
     }
 
