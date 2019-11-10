@@ -1,7 +1,7 @@
 import Component from './Component.js';
 import Header from './common/Header.js';
 import SearchOptions from './pokedex/SearchOptions.js';
-import ResultsDataSection from './pokedex/Results.js';
+// import ResultsDataSection from './pokedex/Results.js';
 import BlueButtons from './pokedex/BlueButtons.js';
 import SearchButtons from './pokedex/SearchButtons.js';
 import Paging from './pokedex/Paging.js';
@@ -10,7 +10,7 @@ import { getPokemanz } from './services/pokedex-api.js';
 
 class PokedexApp extends Component {
 
-    async onRender(dom) {
+    onRender(dom) {
         const header = new Header();
         dom.prepend(header.renderDOM());
 
@@ -26,9 +26,9 @@ class PokedexApp extends Component {
         const searchButtons = new SearchButtons();
         searchControls.prepend(searchButtons.renderDOM());
         
-        const resultsData = dom.querySelector('.results-data');
-        const resultsDataSection = new ResultsDataSection();
-        resultsData.prepend(resultsDataSection.renderDOM());
+        // const resultsData = dom.querySelector('.results-data');
+        // const resultsDataSection = new ResultsDataSection();
+        // resultsData.prepend(resultsDataSection.renderDOM());
 
         const listSection = dom.querySelector('.pokemon-results');
 
@@ -40,10 +40,19 @@ class PokedexApp extends Component {
         const paging = new Paging();
         pageControls.appendChild(paging.renderDOM());
 
-        const pokemanz = await getPokemanz();
-        const results = pokemanz.results;
+        async function loadPokemanz() {
+            const response = await getPokemanz();
+            const pokemanz = response.Search;
+            const totalResults = response.totalResults;
+            pokemonList.update({ pokemanz: pokemanz });
+            paging.update({ totalResults: totalResults });
+        }
 
-        pokemonList.update({ pokemanz: results });
+        loadPokemanz();
+
+        window.addEventListener('hashchange', () => {
+            loadPokemanz();
+        });
     }
 
     renderHTML() {

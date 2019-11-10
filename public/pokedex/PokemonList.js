@@ -4,10 +4,11 @@ import PokemonItem from './PokemonItem.js';
 class PokemonList extends Component {
 
     onRender(dom){
-        const { pokemanz } = this.props;
+        const pokemanz = this.props.pokemanz;
 
         pokemanz.forEach(pokemon => {
-            const pokemonItem = new PokemonItem({ pokemon });
+            const props = { pokemon };
+            const pokemonItem = new PokemonItem(props);
             const pokemonItemDOM = pokemonItem.renderDOM();
             dom.appendChild(pokemonItemDOM);
         });
